@@ -1,4 +1,4 @@
-Bootstrapped from [Sunday: A React Boilerplate](https://github.com/wahabzada/sunday)? 
+Bootstrapped from [Sunday: A React Boilerplate](https://github.com/wahabzada/sunday)
 
 ## Get started
 
