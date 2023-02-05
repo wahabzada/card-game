@@ -12,11 +12,6 @@ export const cardDrawnState = atom({
   default: { id: 0, name: "", unicode: "" } as CardType,
 })
 
-export const loadingState = atom({
-  key: "loadingState",
-  default: false,
-})
-
 export const showCardsState = atom({
   key: "showCardsState",
   default: false,
