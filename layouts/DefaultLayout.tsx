@@ -1,6 +1,4 @@
 import Head from "next/head"
-
-// components
 import { LayoutProps } from "./Layout.types"
 
 export const DefaultLayout: React.FC<LayoutProps> = ({ children }) => {
