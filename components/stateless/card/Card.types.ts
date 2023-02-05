@@ -5,4 +5,5 @@ export interface CardProps {
   show: boolean
   onClick: (event: React.MouseEvent) => void
   className: string
+  disabled?: boolean
 }
