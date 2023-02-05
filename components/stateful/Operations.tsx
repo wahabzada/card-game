@@ -1,15 +1,10 @@
-import { useRecoilState, useRecoilValue } from "recoil"
+import { useRecoilState } from "recoil"
 import { Button } from "components/stateless/button/Button"
-import {
-  cardDeckState,
-  loadingState,
-  showCardsState,
-} from "state/cardDeckState"
+import { cardDeckState, showCardsState } from "state/cardDeckState"
 
 export const Operations: React.FC = () => {
   const [cardDeck, setCardDeck] = useRecoilState(cardDeckState)
   const [showCards, setShowCards] = useRecoilState(showCardsState)
-  const loading = useRecoilValue(loadingState)
 
   const shuffleCards = () => {
     setCardDeck([...cardDeck].sort(() => Math.random() - 0.5))
@@ -23,10 +18,9 @@ export const Operations: React.FC = () => {
       <Button
         label={`${showCards ? "Hide" : "Show"} cards`}
         onClick={() => setShowCards(!showCards)}
-        disabled={loading}
       />
-      <Button label="Shuffle" onClick={shuffleCards} disabled={loading} />
-      <Button label="Sort" onClick={sortCards} disabled={loading} />
+      <Button label="Shuffle" onClick={shuffleCards} />
+      <Button label="Sort" onClick={sortCards} />
     </div>
   )
 }
